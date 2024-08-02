@@ -1,4 +1,4 @@
-class checkoutPage {
+class CheckoutPage {
 
 
 verifyCart() {
@@ -15,7 +15,7 @@ clickOnPay() {
 //}
 
 clickOnModal() {
-    cy.get('.exponea-close-cross').click();
+    cy.get('.ShippingMethodsForm_add-address__Bpqoz').click();
 }
 
 addCheckoutInformation(firstName, lastName, rut, telephone, street1Dir, street2Num, street3Depto) {
@@ -70,4 +70,4 @@ getComponent() {
 
 } 
 
-export default checkoutPage
+export default CheckoutPage

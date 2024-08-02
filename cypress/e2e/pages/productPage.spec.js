@@ -7,6 +7,7 @@ const homePage = new HomePage ();
 const categoryPage = new CategoryPage ();
 const itemData = require ('../component/home/productData.json');
 
+
 before(() => {
     cy.viewport('iphone-xr');
   });
