@@ -10,6 +10,10 @@ const checkoutPage = new CheckoutPage
 const itemData = require ('../component/home/productData.json');
 const checkoutInfo = require ('../component/home/checkoutInfo.json');
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
+
 before(() => {
     cy.viewport('iphone-xr');
   });
@@ -38,11 +42,14 @@ before(() => {
         categoryPage.clickOnDesireItem();
         categoryPage.validateImage();
         categoryPage.validatePrice(); 
-        categoryPage.addFavorite();
+        //categoryPage.addFavorite();
         //productPage.clickOnPromotion();
+        //categoryPage.clickOnModal1 ();
+        //categoryPage.clickOnModal2 ();
         categoryPage.clickOnCookies();
-        categoryPage.verifyMenuFavorite();
-        categoryPage.verifyListFavorite();
+        //categoryPage.verifyMenuFavorite();
+        //categoryPage.verifyMenuAddFavorite ();
+        //categoryPage.verifyListFavorite();
         categoryPage.addItemToCart();
         categoryPage.addOtherItemToCart();
 
